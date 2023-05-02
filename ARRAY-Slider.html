@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY Slider</title>
+</head>
+
+<body>
+
+    <img src="img/1.png" alt="" height="450px" width="100%" class="x">
+    <img src="Img/2.png" alt="" height="450px" width="100%" class="x">
+    <img src="Img/3.png" alt="" height="450px" width="100%" class="x">
+    <img src="Img/4.png" alt="" height="450px" width="100%" class="x">
+
+
+    <script>
+        // jyare ek jeva bahu badha tag ene ek eja jeva efect aapvanu hoy tyare 
+        // document.getElementsByClassName('ClassName')
+        // document.getElementsByTagName('TagName')
+        // aa 2 document thij print karavanu 
+
+        // aapde jyare className ke TagName thi get karayiye tyare kai pan style kaam nahi kare 
+        // kemke ene kabar nahi hoy ke sena upar karavanu 6 Em
+
+        // To ena mate For Loops nu use karvu pade
+
+        // h1_tag = document.getElementsByClassName('ClassNm')
+
+        // exmple: -
+        // for (i = 0; i < h1_tag.length; i++) {
+        //     h1_tag[i]
+        // }
+
+        // have jyare aapde for loops na body na uder varname call karvaniye tyare varName sathe array rakvanu end ena under for loops na intizailty,condition,inc/dec par je varname lidu hoy e aaray na tya lakhavanu
+
+        // exmple
+
+        // for (i = 0; i < h1_tag.length; i++) {
+        //     h1_tag[i].style.color = 'red'
+        // }
+
+        index = 0;
+
+        function hema() {
+            images = document.getElementsByClassName('x')
+            console.log(images)
+                // images.style.display = 'none';
+
+            for (i = 0; i < images.length; i++) {
+                images[i].style.display = 'none';
+            }
+
+
+
+            images[index].style.display = 'block';
+            index++;
+
+            if (index == images.length) {
+                index = 0;
+            }
+            // hema()
+            setTimeout("hema()", 1000);
+        }
+        hema()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array Slider 1</title>
+
+    <style>
+        div {
+            overflow: hidden;
+        }
+        
+        .x {
+            animation: hem 1s;
+        }
+        
+        @keyframes hem {
+            form {
+                transform: scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: scale(1.2);
+                opacity: .7;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="Img-1/aurora-1197753__340.jpg" alt="" height="450px" width="100%" class="x">
+        <img src="Img-1/hills-615429__340.jpg" alt="" height="450px" width="100%" class="x">
+        <img src="Img-1/nature-3082832__340.jpg" alt="" height="450px" width="100%" class="x">
+        <img src="Img-1/road-1072821__340 (2).jpg" alt="" height="450px" width="100%" class="x">
+        <img src="Img-1/schrecksee-2534484__340.jpg" alt="" height="450px" width="100%" class="x">
+        <img src="Img-1/tree-736885__340.jpg" alt="" height="450px" width="100%" class="x">
+    </div>
+    <script>
+        index = 0;
+
+        function hem() {
+
+            img = document.getElementsByClassName('x')
+            console.log(img)
+
+            // img[].style.display = 'none'
+
+            for (y = 0; y < img.length; y++) {
+                img[y].style.display = 'none'
+            }
+
+            img[index].style.display = 'block'
+            index++;
+
+            if (index == img.length) {
+                index = 0;
+            }
+
+            setTimeout('hem()', 0800)
+        }
+        hem()
+    </script>
+</body>
+
+</html>
